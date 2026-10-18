@@ -1,4 +1,5 @@
 # Student Management System
+Live Link: https://samarthahuja827.github.io/WD_Week5_SamarthAhuja/
 
 ## Project Overview
 The Student Management System is a responsive web application built using HTML, CSS, and JavaScript to manage student records easily.
