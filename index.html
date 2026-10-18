@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage your student records easily.</p>
+    </header>
+
+    <main>
+
+        <section id="add-student">
+            <h2>Add a Student</h2>
+
+            <form id="studentForm">
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" placeholder="Enter student name" required>
+
+                <br><br>
+
+                <label for="studentCourse">Course:</label>
+                <select id="studentCourse" required>
+                    <option value="">Select course</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="B.Sc">B.Sc</option>
+                </select>
+
+                <br><br>
+
+                <label for="studentMarks">Marks:</label>
+                <input type="number" id="studentMarks" placeholder="Enter marks" min="0" max="100" required>
+
+                <br><br>
+
+
+                <button type="submit">Add Student</button>
+                <button type="button" id="cancelEdit" hidden>Cancel Edit</button>
+
+            </form>
+        </section>
+
+
+
+        <section id="student-records">
+            <h2>Student Records</h2>
+
+            <div id="studentStats">
+                <p>Total Students: <span id="totalStudents">0</span></p>
+                <p>Average Marks: <span id="averageMarks">0</span></p>
+            </div>
+
+            <input type="text" id="searchInput" placeholder="Search students by name...">
+
+            <select id="courseFilter">
+                <option value="">All Courses</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Sc">B.Sc</option>
+            </select>
+
+            <select id="sortMarks">
+                <option value="">Sort by Marks</option>
+                <option value="highToLow">Highest to Lowest</option>
+                <option value="lowToHigh">Lowest to Highest</option>
+            </select>
+
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>Result</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+                    <!-- JavaScript will add student rows here -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</body>
+
+</html>
